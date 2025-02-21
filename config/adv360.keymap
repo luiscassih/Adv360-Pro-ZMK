@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/stp.h>
 #include <dt-bindings/zmk/backlight.h>
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000 // default 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 15 // default 10
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -53,7 +55,7 @@
 &kp F1     &kp F2         &kp F3     &kp F4        &kp F5      &kp F6              &tog 1                                                  &mo 3   &kp F7         &kp F8                &kp F9                 &kp F10    &kp F11  &kp F12
 &trans     &kp KP_N0      &kp KP_N7  &kp KP_SLASH  &trans      &trans    &none                                                   &none   &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT    &trans   &trans
 &trans     &kp LC(KP_N3)  &kp KP_N1  &kp KP_N3     &kp F       &trans       &none             &kp RALT  &trans      &trans  &trans  &none   &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &trans   &trans
-&kp LSHFT  &kp KP_MINUS   &kp KP_N9  &kp KP_PLUS   &kp KP_DOT  &trans                              &trans      &trans                  &kp BACKSPACE  &kp DOT               &kp LT                 &kp GT     &trans   &trans
+&kp LSHFT  &kp KP_MINUS   &kp KP_N9  &kp KP_PLUS   &kp KP_DOT  &trans                              &trans      &trans                  &kp BACKSPACE  &kp M               &kp LT                 &kp GT     &trans   &trans
 &trans     &trans         &kp KP_N5  &trans        &trans                          &kp LEFT_CONTROL  &trans    &trans      &trans  &trans  &trans                 &trans                &trans                 &trans     &trans   &trans
             >;
         };
@@ -74,7 +76,7 @@
 &trans  &trans          &trans           &trans           &trans          &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mkp RCLK       &mmv MOVE_UP     &mkp LCLK        &msc SCRL_UP    &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans           &trans          &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &mkp MCLK           &trans          &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans          &trans           &trans           &trans                  &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
