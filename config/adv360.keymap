@@ -68,6 +68,16 @@
 &none  &none         &none         &none         &none                       &bl BL_INC              &bl BL_DEC  &none           &bl BL_TOG  &none       &none                          &bl BL_TOG  &rgb_ug RGB_TOG  &bl BL_INC  &bl BL_DEC  &none
             >;
         };
+    Mouse {
+        display-name = "Mouse";
+        bindings = <
+&trans  &trans          &trans           &trans           &trans          &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mkp RCLK       &mmv MOVE_UP     &mkp LCLK        &msc SCRL_UP    &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &msc SCRL_LEFT  &msc SCRL_RIGHT  &trans           &trans          &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans           &trans           &trans                  &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     extra1 { 
       display-name = "Red";    
       status = "reserved";
