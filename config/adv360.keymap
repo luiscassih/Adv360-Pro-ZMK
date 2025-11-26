@@ -26,22 +26,6 @@
         };
     };
 
-    macros {
-        acute: n_tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT &kp SQT>;
-            label = "N_TILDE";
-        };
-
-        ntilde: n_tilde_mayus {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RALT &kp TILDE>;
-            label = "N_TILDE_MAYUS";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -72,8 +56,8 @@
             bindings = <
 &kp F1     &kp F2         &kp F3     &kp F4        &kp F5      &kp F6           &tog 1                                                  &mo 3   &kp F7         &kp F8                &kp F9                 &kp F10    &kp F11  &kp F12
 &trans     &kp KP_N0      &kp KP_N7  &kp KP_SLASH  &trans      &kp PRINTSCREEN  &none                                                   &none   &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT    &trans   &trans
-&trans     &kp LC(KP_N3)  &kp KP_N1  &kp KP_N3     &kp KP_DOT  &ntilde          &none             &kp RALT  &trans      &trans  &trans  &none   &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &trans   &trans
-&kp LSHFT  &kp KP_MINUS   &kp KP_N9  &kp KP_PLUS   &trans      &acute                                       &trans      &trans                  &kp BACKSPACE  &kp DOT               &kp LT                 &kp GT     &trans   &trans
+&trans     &kp LC(KP_N3)  &kp KP_N1  &kp KP_N3     &kp KP_DOT  &kp RA(TILDE)    &none             &kp RALT  &trans      &trans  &trans  &none   &kp EQUAL      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH  &trans   &trans
+&kp LSHFT  &kp KP_MINUS   &kp KP_N9  &kp KP_PLUS   &trans      &kp RA(SQT)                                  &trans      &trans                  &kp BACKSPACE  &kp DOT               &kp LT                 &kp GT     &trans   &trans
 &trans     &trans         &kp KP_N5  &trans        &trans                       &kp LEFT_CONTROL  &trans    &trans      &trans  &trans  &trans                 &trans                &trans                 &trans     &trans   &trans
             >;
         };
